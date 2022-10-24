@@ -1,0 +1,244 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-grey: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+    --almost-blue: #014B70;
+    --almost-cyan: hsla(207, 23%, 48%, 0.753);
+    --light-blue: #016CA2;
+
+    --text-font: 'Epilogue', sans-serif;
+    --nav-font: 'Josefin Sans', sans-serif;
+
+    --translate-focus: 0px;
+    --font-focus: 18px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+    font-size: 1em;
+}
+
+body {
+    background-color: var(--almost-white);
+    color: var(--almost-black);
+    font-family: var(--nav-font);
+}
+
+a {
+    text-decoration: none;
+    color: var(--almost-black);
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.header {
+    position: relative;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: transparent;
+}
+
+.header__nav a {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    color: var(--almost-cyan);
+    font-size: 1.1em;
+}
+
+.header__nav a:hover {
+    text-decoration: underline var(--almost-blue);
+    color: var(--almost-blue);
+}
+
+.nav__logo {
+    margin-right: 30px;
+}
+
+.nav__logo img{
+    width: 250px;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+}
+
+.nav__account {
+    display: flex;
+    align-items: center;
+}
+
+.nav__account a:last-child {
+    border: 2px solid var(--almost-cyan);
+    border-radius: 15px;
+    padding: 10px 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.nav__account a:last-child:hover {
+    text-decoration: none;
+    color: var(--almost-white);
+    background-color: var(--light-blue);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88vh;
+    font-family: var(--text-font);
+}
+
+.main__form {
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.form__header {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__header h1 {
+    position: relative;
+    font-size: 2.5em;
+    color: var(--almost-blue);
+    font-weight: 700;
+}
+
+.form__header h1::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 45px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 8px;
+    background-color: var(--almost-cyan);
+}
+
+.form__inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+    position: relative;
+}
+
+.input-form {
+    font-size: 18px;
+    color: var(--almost-cyan);
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 52px;
+    padding: 0 5px;
+    position: relative;
+    border-bottom: 2px solid var(--almost-cyan);
+}
+
+.input-focus {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.input-focus::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    transition: all .4s;
+    background: var(--almost-cyan);
+}
+
+.input-form:focus ~ .input-focus::before {
+    background: var(--almost-blue);
+    width: 100%;
+}
+
+.input-focus::after {
+    color: var(--almost-cyan);
+    line-height: 1.2;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding-left: 5px;
+    transition: all .4s;
+    translate: 0px var(--translate-focus);
+    font-size: var(--font-focus);
+}
+
+.input-form:focus ~ .input-focus::after {
+    translate: 0px -25px;
+    font-size: 15px;
+}
+
+.form__verify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#submit-btn {
+    font-family: var(--text-font);
+    font-size: 1.2em;
+    width: 100%;
+    border: 2px solid var(--almost-cyan);
+    color: var(--almost-cyan);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 6px 1px #00000021;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    letter-spacing: 0.5px;
+    color: var(--almost-white);
+    background-color: var(--light-blue);
+}
+
+.form__register {
+    margin: 20px 0px;
+    color: var(--almost-cyan);
+}
+
+.form__register a {
+    color: var(--light-blue);
+}
+
+.form__register a:hover {
+    color: var(--almost-blue);
+    text-decoration: underline var(--almost-blue);
+}
