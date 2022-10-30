@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,29 +16,29 @@
         <nav class="header__nav">
             <div class="nav__links">
                 <div class="nav__logo">
-                    <a href="../index.html"><img src="../images/atlantis-logo.png" alt="Atlantis Logo" id="logo-img"></a>
+                    <a href="../index.php"><img src="../images/atlantis-logo.png" alt="Atlantis Logo" id="logo-img"></a>
                 </div>
                 <a href="./catalog.php">Catálogo</a>
                 <a href="#">Sobre nós</a>
             </div>
             <div class="nav__account">
-                <a href="../pages/login.html" id="login-btn">Login</a>
-                <a href="../pages/register.html" id="register-btn">Registrar</a>
+                <a href="../pages/login.php" id="login-btn">Login</a>
+                <a href="../pages/register.php" id="register-btn">Registrar</a>
             </div>
         </nav>
     </header>
     <main class="main">
-        <form class="main__form">
+        <form class="main__form" method="POST" action="func.login.php">
             <div class="form__header">
                 <h1>Login</h1>
             </div>
             <div class="form__inputs">
                 <input type="text" name="username" id="username" class="input-form" required>
-                <span class="input-focus" data-placeholder="Username"></span>
+                <span class="input-focus" data-placeholder="Nome de usuário"></span>
             </div>
             <div class="form__inputs">
                 <input type="password" name="password" id="password" class="input-form" required>
-                <span class="input-focus" data-placeholder="Password"></span>
+                <span class="input-focus" data-placeholder="Senha"></span>
             </div>
             <div class="form__verify">
                 <input type="submit" value="Enviar" id="submit-btn">

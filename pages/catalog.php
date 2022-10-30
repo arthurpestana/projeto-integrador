@@ -33,11 +33,11 @@ $_SESSION['consulta']=(!empty($consulta)?" where ".$consulta:NULL);
             <div class="nav__links">
                 <ul class="nav__list">
                     <div class="nav__pages">
-                        <li class="nav__logo"><a href="../index.html"><img src="../images/logo-white.png" alt="Atlantis Logo" class="nav__imgs"><img src="../images/atlantis-logo-white.png" alt="" class="nav__text" id="logo-img"></a></li>
+                        <li class="nav__logo"><a href="../index.php"><img src="../images/logo-white.png" alt="Atlantis Logo" class="nav__imgs"><img src="../images/atlantis-logo-white.png" alt="" class="nav__text" id="logo-img"></a></li>
                         <li><a href="./catalog.php"><img src="../images/catalog-outline.svg" alt="" class="nav__imgs"><span class="nav__text">Catálogo</span></a></li>
                         <li><a href="./about.html"><img src="../images/about-circle-outline.svg" alt="" class="nav__imgs"><span class="nav__text">Sobre nós</span></a></li>
-                        <li><a href="./login.html" id="login-btn"><img src="../images/log-in-outline.svg" alt="" class="nav__imgs"><span class="nav__text">Login</span></a></li>
-                        <li><a href="./register.html" id="register-btn"><img src="../images/sign-up-outline.svg" alt="" class="nav__imgs"><span class="nav__text">Registrar</span></a></li>
+                        <li><a href="./login.php" id="login-btn"><img src="../images/log-in-outline.svg" alt="" class="nav__imgs"><span class="nav__text">Login</span></a></li>
+                        <li><a href="./register.php" id="register-btn"><img src="../images/sign-up-outline.svg" alt="" class="nav__imgs"><span class="nav__text">Registrar</span></a></li>
                     </div>
                     <div class="nav__user">
                         <li><a href="./user.html"><img src="../images/user-circle-outline.svg" alt="" class="nav__imgs"><span class="nav__text">Usuário</span></a></li>

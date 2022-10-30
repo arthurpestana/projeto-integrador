@@ -13,14 +13,14 @@
         <nav class="header__nav">
             <div class="nav__links">
                 <div class="nav__logo">
-                    <a href="index.html"><img src="./images/atlantis-logo.png" alt="Atlantis Logo" id="logo-img"></a>
+                    <a href="index.php"><img src="./images/atlantis-logo.png" alt="Atlantis Logo" id="logo-img"></a>
                 </div>
                 <a href="./pages/catalog.php">Catálogo</a>
                 <a href="#">Sobre nós</a>
             </div>
             <div class="nav__account">
-                <a href="./pages/login.html" id="login-btn">Login</a>
-                <a href="./pages/register.html" id="register-btn">Registrar</a>
+                <a href="./pages/login.php" id="login-btn">Login</a>
+                <a href="./pages/register.php" id="register-btn">Registrar</a>
             </div>
         </nav>
     </header>
